@@ -23,8 +23,15 @@ public class BasicController {
 		// @GetMapping("/basic/{id}") // /basic/2
 		@GetMapping("/{id}")
 		public int m2(@PathVariable int id) {
-			int sum = id + 10;
+			int sum = id + 25;
 			return sum;
+		}
+
+		@GetMapping("/getdetails")
+		public String display() {
+			// call service class for get any data
+			System.out.println("after deployment1");
+			return "success after deployment1";
 		}
 
 }
